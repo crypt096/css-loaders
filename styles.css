@@ -5,6 +5,10 @@ body {
   justify-content: space-around;
 }
 
+h1 {
+  font-family: "Sacramento", cursive;
+}
+
 /* Spinner */
 .spinner {
   width: 100px;
