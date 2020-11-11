@@ -5,6 +5,18 @@ body {
   justify-content: space-around;
 }
 
+.spinner-content,
+.bouncing-balls-content {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 150px;
+}
+
+.spinner-content h1,
+.bouncing-balls-content h1 {
+  margin-right: 100px;
+}
+
 h1 {
   font-family: "Sacramento", cursive;
 }
@@ -64,5 +76,45 @@ h1 {
 }
 
 /* Bouncing balls */
+
+.bouncer {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  width: 100px;
+  height: 100px;
+}
+
+.bouncer div {
+  width: 20px;
+  height: 20px;
+  background: #0077ff;
+  border-radius: 50%;
+  animation: bouncer 0.5s cubic-bezier(0.19, 0.57, 0.3, 0.98) infinite alternate;
+}
+
+.bouncer div:nth-child(2) {
+  animation-delay: 0.1s;
+  opacity: 0.8;
+}
+
+.bouncer div:nth-child(3) {
+  animation-delay: 0.2s;
+  opacity: 0.6;
+}
+
+.bouncer div:nth-child(4) {
+  animation-delay: 0.3s;
+  opacity: 0.4;
+}
+
+@keyframes bouncer {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100px);
+  }
+}
 
 /* Flipping squares */
